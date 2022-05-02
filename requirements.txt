@@ -3,3 +3,4 @@ BeautifulSoup4==4.11.1
 tabula-py==2.3.0
 pandas==1.
 streamlit==1.8.1
+openpyxl
