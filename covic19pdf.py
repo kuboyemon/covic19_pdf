@@ -85,12 +85,9 @@ else:
     st.write('###### 備考')
     st.write(df_concat.loc[num,'備考'])
 
-st.write('''
-
-
-
-''')
-
+st.write(" \n ")
+st.write(" \n ")
+st.write(" \n ")
 st.write('vol.1.0     2022.5.2 ')
 st.write('vol.1.0.1   2022.5.5 元データPDFの読み込み不具合を修正')
 st.write('vol.1.1.0   2022.5.5 詳細表示選択部を入力式から選択式に修正')
