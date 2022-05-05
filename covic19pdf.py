@@ -18,7 +18,7 @@ pdf_list = [temp for temp in link_list if temp.endswith('pdf')]
 # print(pdf_list[2])
 
 url_covic_pdf='https://www.pref.tochigi.lg.jp'+f'{pdf_list[2]}'
-area=[250,100,547,900]
+area=[250,100,565,900]
 df = read_pdf(url_covic_pdf,pages='all',area=area,lattice=True)
 df_concat=pd.concat(df)
 df_concat=df_concat.reset_index()
@@ -81,5 +81,7 @@ else:
     st.write('###### 備考')
     st.write(df_concat.loc[num,'備考'])
 
-st.write('vol.1.0   2022.5.2')
+st.write('vol.1.0     2022.5.2 ')
+st.write('vol.1.0.1   2022.5.5 元データPDFの読み込み不具合を修正')
+st.write('Copyright © kuboyemon')
 
