@@ -29,7 +29,7 @@ st.title('''
 st.header('''
 栃木県内無料検査拠点検索システム
 ''')
-st.write('#### 栃木県が公開するデータをもとに作成した検索システムです。')
+st.subheader('栃木県が公開するデータをもとに作成した検索システムです。')
 st.write(url)
 
 city=st.selectbox(
