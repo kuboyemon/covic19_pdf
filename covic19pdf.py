@@ -65,7 +65,11 @@ st.write("""
 
 
 """)
-num=st.number_input('index番号を入力して詳細を表示する。',step=1)
+df_index=df.index.values
+
+num=st.selectbox('index番号を選択して詳細を表示する。',
+(i for i in df_index)
+)
 num=int(num)
 if num==None:
     st.write('番号を入力してください。')
@@ -83,5 +87,7 @@ else:
 
 st.write('vol.1.0     2022.5.2 ')
 st.write('vol.1.0.1   2022.5.5 元データPDFの読み込み不具合を修正')
+st.write('vol.1.1.0   2022.5.5 詳細表示選択部を入力式から選択式に修正')
+st.write('※今後の予定　詳細表示の電話番号にtel linkをつけます。')
 st.write('Copyright © kuboyemon')
 
