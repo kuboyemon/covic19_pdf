@@ -85,8 +85,8 @@ else:
     # st.write(df_concat.loc[num,'連絡先'])
     tel_num=df_concat.loc[num,'連絡先']
     # print(tel_num)
-    stc.html("<a href='tel:{}'>{}</a>".format(tel_num,tel_num))
     st.write('※機種によっては長押しで電話発信可能')
+    stc.html("<a href='tel:{}'>{}</a>".format(tel_num,tel_num))    
     st.write('###### 備考')
     st.write(df_concat.loc[num,'備考'])
 
