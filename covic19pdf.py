@@ -80,7 +80,8 @@ else:
     st.write('###### 検査種類')
     st.write(df_concat.loc[num,'検査種類'])
     st.write('###### 所在地')
-    st.write(df_concat.loc[num,'所在地'])
+    stc.html("<a href='https://www.google.co.jp/maps/place/{}'>{}</a>".format(df_concat.loc[num,'所在地'],df_concat.loc[num,'所在地'])) 
+    # st.write(df_concat.loc[num,'所在地'])
     st.write('###### 連絡先')
     # st.write(df_concat.loc[num,'連絡先'])
     tel_num=df_concat.loc[num,'連絡先']
