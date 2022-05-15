@@ -31,6 +31,7 @@ st.header('''
 栃木県内無料検査拠点検索システム
 ''')
 st.subheader('栃木県が公開するデータをもとに作成した検索システムです。')
+st.write('元データ掲載URL')
 st.write(url)
 
 city=st.selectbox(
@@ -79,29 +80,30 @@ else:
     st.write(df_concat.loc[num,'検査拠点'])
     st.write('###### 検査種類')
     st.write(df_concat.loc[num,'検査種類'])
+    # st.write('###### 連絡先')
+    # tel_num=df_concat.loc[num,'連絡先']
+    # st.write('※長押しで電話発信可能')
+    # stc.html("<a href='tel:{}'>{}</a>".format(tel_num,tel_num)) 
+    st.write('###### 所在地')
+    # st.write('※長押しでgoogle map表示')
+    # stc.html("<a href='https://www.google.co.jp/maps/place/{}'>{}</a>".format(df_concat.loc[num,'所在地'],df_concat.loc[num,'所在地'])) 
+    link='[{}](https://www.google.co.jp/maps/place/{})'.format(df_concat.loc[num,'所在地'],df_concat.loc[num,'所在地'])
+    st.markdown(link, unsafe_allow_html=True)
+    st.write('###### 備考')
+    st.write(df_concat.loc[num,'備考'])
     st.write('###### 連絡先')
     tel_num=df_concat.loc[num,'連絡先']
     st.write('※長押しで電話発信可能')
     stc.html("<a href='tel:{}'>{}</a>".format(tel_num,tel_num)) 
-    st.write('')
-    st.write('###### 所在地')
-    st.write('※長押しでgoogle map表示')
-    stc.html("<a href='https://www.google.co.jp/maps/place/{}'>{}</a>".format(df_concat.loc[num,'所在地'],df_concat.loc[num,'所在地'])) 
-    st.write('')       
-    st.write('###### 備考')
-    st.write(df_concat.loc[num,'備考'])
-
 st.write("""
-
-
-
 """)
 
 st.write('Ver.1.0     2022.5.2 ')
 st.write('Ver.1.0.1   2022.5.5 元データPDFの読み込み不具合を修正')
 st.write('Ver.1.1.0   2022.5.5 詳細表示選択部を入力式から選択式に修正')
-st.write('Ver.1.2.0   2022.5.11 tel_link機能を追加')
+st.write('Ver.1.2.0   2022.5.11 Tel link機能を追加')
 st.write('Ver.1.3.0   2022.5.15 Google map link機能を追加')
+st.write('Ver.1.3.1   2022.5.15 配置等微調整')
 st.write('※iPhoneSE3にて動作確認')
 st.write('Copyright © kuboyemon at Yaita PS from Tochigi PD')
 
