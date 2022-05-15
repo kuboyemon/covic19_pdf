@@ -31,6 +31,7 @@ st.header('''
 栃木県内無料検査拠点検索システム
 ''')
 st.subheader('栃木県が公開するデータをもとに作成した検索システムです。')
+st.subheader('ブックマーク登録してもらえるとうれしいです。')
 st.write('元データ掲載URL')
 st.write(url)
 
