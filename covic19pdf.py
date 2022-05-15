@@ -79,13 +79,13 @@ else:
     st.write(df_concat.loc[num,'検査拠点'])
     st.write('###### 検査種類')
     st.write(df_concat.loc[num,'検査種類'])
-    st.write('###### 所在地')
-    st.write('※長押しでgoogle map表示')
-    stc.html("<a href='https://www.google.co.jp/maps/place/{}'>{}</a>".format(df_concat.loc[num,'所在地'],df_concat.loc[num,'所在地'])) 
     st.write('###### 連絡先')
     tel_num=df_concat.loc[num,'連絡先']
     st.write('※長押しで電話発信可能')
-    stc.html("<a href='tel:{}'>{}</a>".format(tel_num,tel_num))    
+    stc.html("<a href='tel:{}'>{}</a>".format(tel_num,tel_num)) 
+    st.write('###### 所在地')
+    st.write('※長押しでgoogle map表示')
+    stc.html("<a href='https://www.google.co.jp/maps/place/{}'>{}</a>".format(df_concat.loc[num,'所在地'],df_concat.loc[num,'所在地']))        
     st.write('###### 備考')
     st.write(df_concat.loc[num,'備考'])
 
