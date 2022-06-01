@@ -2,5 +2,5 @@ requests==2.27.1
 BeautifulSoup4==4.11.1
 tabula-py==2.3.0
 pandas==1.4.2
-streamlit==1.8.1
+streamlit==1.9.2
 openpyxl
