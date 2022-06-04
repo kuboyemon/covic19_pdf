@@ -19,10 +19,17 @@ pdf_list = [temp for temp in link_list if temp.endswith('pdf')]
 # print(pdf_list[2])
 
 url_covic_pdf='https://www.pref.tochigi.lg.jp'+f'{pdf_list[2]}'
-area=[220,95,1000,1200]
+# area=[315,130,1000,1200]
+# df = read_pdf(url_covic_pdf,pages='all',area=area,lattice=True)
+# df_concat=pd.concat(df)
+# df_concat=df_concat.reset_index()
+url_covic_pdf='https://www.pref.tochigi.lg.jp'+f'{pdf_list[2]}'
+area=[330,130,1000,1200]
 df = read_pdf(url_covic_pdf,pages='all',area=area,lattice=True)
 df_concat=pd.concat(df)
 df_concat=df_concat.reset_index()
+df_concat=df_concat.rename(columns={'Unnamed: 0': '検査拠点','Unnamed: 1': '種別','Unnamed: 2': '検査方法','Unnamed: 3': '所在地','Unnamed: 4': '電話番号','Unnamed: 5': '備考'})
+
 
 st.title('''
 新型コロナウイルス
@@ -33,6 +40,7 @@ st.header('''
 st.subheader('栃木県が公開するデータを元に作成した検索システムです。ブックマーク登録してもらえるとうれしいです。')
 st.write('元データ掲載URL')
 st.write(url)
+st.write('※元データ書式が変更された場合正常に起動しない場合があります。正常に起動しない場合は元URLより元データを参照してください。')
 
 city=st.selectbox(
     '検索したい市町を選択してください。',
@@ -56,9 +64,9 @@ else:
 if method=='すべて':
     df=df
 else:
-    df=df[df['検査種類'].str.contains(method)]
+    df=df[df['検査方法'].str.contains(method)]
 
-st.dataframe(df[['検査拠点','検査種類']])
+st.dataframe(df[['検査拠点','検査方法']])
 # ,'所在地','連絡先','備考']])
 st.write('拠点数:'+str(len(df)))
 
@@ -78,8 +86,8 @@ if num==None:
 else:
     st.write('###### 検査拠点')
     st.write(df_concat.loc[num,'検査拠点'])
-    st.write('###### 検査種類')
-    st.write(df_concat.loc[num,'検査種類'])
+    st.write('###### 検査方法')
+    st.write(df_concat.loc[num,'検査方法'])
     # st.write('###### 連絡先')
     # tel_num=df_concat.loc[num,'連絡先']
     # st.write('※長押しで電話発信可能')
@@ -91,8 +99,8 @@ else:
     st.markdown(link, unsafe_allow_html=True)
     st.write('###### 備考')
     st.write(df_concat.loc[num,'備考'])
-    st.write('###### 連絡先')
-    tel_num=df_concat.loc[num,'連絡先']
+    st.write('###### 電話番号')
+    tel_num=df_concat.loc[num,'電話番号']
     st.write('※長押しで電話発信可能')
     stc.html("<a href='tel:{}'>{}</a>".format(tel_num,tel_num)) 
 st.write("""
@@ -105,6 +113,7 @@ st.write('Ver.1.2.0   2022.5.11 Tel link機能を追加')
 st.write('Ver.1.3.0   2022.5.15 Google map link機能を追加')
 st.write('Ver.1.3.1   2022.5.15 配置等微調整')
 st.write('Ver.1.3.2   2022.6.1 元データPDF変更に伴い微調整')
+st.write('Ver.1.3.3   2022.6.4 元データPDF変更に伴い微調整,冒頭注意書きを追加')
 st.write('※iPhoneSE3にて動作確認')
 st.write('Copyright © kuboyemon at Yaita PS from Tochigi PD')
 
