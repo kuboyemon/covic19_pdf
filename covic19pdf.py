@@ -102,14 +102,10 @@ else:
 st.write("""
 """)
 
-st.write('Ver.1.0     2022.5.2 ')
-st.write('Ver.1.0.1   2022.5.5 元データPDFの読み込み不具合を修正')
-st.write('Ver.1.1.0   2022.5.5 詳細表示選択部を入力式から選択式に修正')
+st.write('Ver.1.0     2022.5.2 公開開始')
 st.write('Ver.1.2.0   2022.5.11 Tel link機能を追加')
 st.write('Ver.1.3.0   2022.5.15 Google map link機能を追加')
-st.write('Ver.1.3.1   2022.5.15 配置等微調整')
-st.write('Ver.1.3.2   2022.6.1 元データPDF変更に伴い微調整')
-st.write('Ver.1.3.3   2022.6.4 元データPDF変更に伴い微調整,冒頭注意書きを追加')
+st.write('Ver.1.3.4   2022.6.1 元データPDF変更に伴い微調整')
 st.write('※iPhoneSE3にて動作確認')
 st.write('Copyright © kuboyemon at Yaita PS from Tochigi PD')
 
