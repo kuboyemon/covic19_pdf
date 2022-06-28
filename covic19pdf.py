@@ -18,8 +18,7 @@ for link in result:
 pdf_list = [temp for temp in link_list if temp.endswith('pdf')]
 # print(pdf_list[2])
 
-url_covic_pdf='https://www.pref.tochigi.lg.jp'+f'{pdf_list[2]}'
-url_covic_pdf='https://www.pref.tochigi.lg.jp'+f'{pdf_list[2]}'
+url_covic_pdf='https://www.pref.tochigi.lg.jp'+f'{pdf_list[3]}'
 area=[235,95,1000,1200]
 df = read_pdf(url_covic_pdf,pages='all',area=area,lattice=True)
 df_concat=pd.concat(df)
@@ -105,7 +104,7 @@ st.write("""
 st.write('Ver.1.0     2022.5.2 公開開始')
 st.write('Ver.1.2.0   2022.5.11 Tel link機能を追加')
 st.write('Ver.1.3.0   2022.5.15 Google map link機能を追加')
-st.write('Ver.1.3.4   2022.6.14 元データPDF変更に伴い微調整')
+st.write('Ver.1.3.5   2022.6.28 元データ掲載HPに伴い微調整')
 st.write('※iPhoneSE3にて動作確認')
 st.write('Copyright © kuboyemon at Yaita PS from Tochigi PD')
 
