@@ -18,7 +18,7 @@ for link in result:
 pdf_list = [temp for temp in link_list if temp.endswith('pdf')]
 # print(pdf_list[2])
 
-url_covic_pdf='https://www.pref.tochigi.lg.jp'+f'{pdf_list[3]}'
+url_covic_pdf='https://www.pref.tochigi.lg.jp'+f'{pdf_list[2]}'
 area=[235,95,1000,1200]
 df = read_pdf(url_covic_pdf,pages='all',area=area,lattice=True)
 df_concat=pd.concat(df)
