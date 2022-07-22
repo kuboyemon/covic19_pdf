@@ -10,6 +10,8 @@ res=req.get(url)
 soup=BeautifulSoup(res.text,'html.parser')
 result = soup.select("a[href]")
 
+url_2='https://www.pref.tochigi.lg.jp/e04/sinnryoukensa2.html'
+
 link_list =[]
 for link in result:
     href = link.get("href")
@@ -36,6 +38,8 @@ st.subheader('栃木県が公開するデータを元に作成した検索シス
 st.write('元データ掲載URL')
 st.write(url)
 st.write('※元データ書式が変更された場合正常に起動しないことがあります。この場合元URLより元データを参照し電話番号等確認ください。')
+st.write('!!注意!!発熱などの症状がある場合は無料検査機関を利用できません。この場合は以下のリンクに掲載のある医療機関などを利用してください。')
+st.write(url_2)
 
 city=st.selectbox(
     '検索したい市町を選択してください。',
@@ -104,7 +108,7 @@ st.write("""
 st.write('Ver.1.0     2022.5.2 公開開始')
 st.write('Ver.1.2.0   2022.5.11 Tel link機能を追加')
 st.write('Ver.1.3.0   2022.5.15 Google map link機能を追加')
-st.write('Ver.1.3.5   2022.6.28 元データ掲載HPレイアウト変更に伴い微調整')
+st.write('Ver.1.4.0   2022.7.22 発熱がある場合のリンク先を追加')
 st.write('※iPhoneSE3にて動作確認')
 st.write('Copyright © kuboyemon at Yaita PS from Tochigi PD')
 
