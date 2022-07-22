@@ -40,7 +40,7 @@ st.write(url_2)
 st.write('元データ掲載URL')
 st.write(url)
 st.write('※元データ書式が変更された場合正常に起動しないことがあります。この場合元URLより元データを参照し電話番号等確認ください。')
-st.write('## 検索アプリ')
+st.write('#### 検索アプリ')
 
 city=st.selectbox(
     '検索したい市町を選択してください。',
