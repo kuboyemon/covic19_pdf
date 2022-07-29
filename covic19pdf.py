@@ -112,7 +112,7 @@ st.write('Ver.1.0     2022.5.2 公開開始')
 st.write('Ver.1.2.0   2022.5.11 Tel link機能を追加')
 st.write('Ver.1.3.0   2022.5.15 Google map link機能を追加')
 st.write('Ver.1.4.0   2022.7.22 発熱がある場合のリンク先を追加')
-st.write('Ver.1.4.1   2022.7.29 定期メンテ実施
+st.write('Ver.1.4.1   2022.7.29 定期メンテ実施')
 st.write('※iPhoneSE3にて動作確認')
 st.write('Copyright © kuboyemon at Yaita PS from Tochigi PD')
 
