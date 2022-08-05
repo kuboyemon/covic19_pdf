@@ -34,9 +34,11 @@ st.title('''
 st.header('''
 栃木県内無料検査拠点検索システム
 ''')
-st.subheader('栃木県が公開するデータを元に作成した検索システムです。ブックマーク登録してもらえるとうれしいです。')
+st.subheader('ブックマーク登録お願いします')
 st.write('!!注意!!発熱などの症状がある場合は無料検査機関を利用できません。この場合は以下のリンクに掲載のある医療機関などを利用してください。')
 st.write(url_2)
+st.write('New!!検査キット配布薬局検索アプリ')
+st.write('https://kuboyemon-covic19-kit-covic19-xlsx-criw4a.streamlitapp.com/')
 
 st.write('#### ↓↓無料検査機関検索の入力はこの下です↓↓')
 st.write('※元データ書式が変更された場合正常に起動しないことがあります。この場合元URLより元データを参照し電話番号等確認ください。')
@@ -112,7 +114,7 @@ st.write('Ver.1.0     2022.5.2 公開開始')
 st.write('Ver.1.2.0   2022.5.11 Tel link機能を追加')
 st.write('Ver.1.3.0   2022.5.15 Google map link機能を追加')
 st.write('Ver.1.4.0   2022.7.22 発熱がある場合のリンク先を追加')
-st.write('Ver.1.4.1   2022.7.29 定期メンテ実施')
+st.write('Ver.1.5.0   2022.8.5 検査キット取扱薬局検索システムへのリンクを追加')
 st.write('※iPhoneSE3にて動作確認')
 st.write('Copyright © kuboyemon at Yaita PS from Tochigi PD')
 
