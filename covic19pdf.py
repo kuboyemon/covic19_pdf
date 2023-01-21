@@ -68,9 +68,9 @@ else:
 if method=='すべて':
     df=df
 else:
-    df=df[df['検査方法'].str.contains(method)]
+    df=df[df['検査種類'].str.contains(method)]
 
-st.dataframe(df[['検査拠点','検査方法']])
+st.dataframe(df[['検査拠点','検査種類']])
 # ,'所在地','連絡先','備考']])
 st.write('拠点数:'+str(len(df)))
 
