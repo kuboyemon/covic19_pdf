@@ -91,7 +91,7 @@ else:
     st.write('###### 検査拠点')
     st.write(df_concat.loc[num,'検査拠点'])
     st.write('###### 検査方法')
-    st.write(df_concat.loc[num,'検査方法'])
+    st.write(df_concat.loc[num,'検査種類'])
     # st.write('###### 連絡先')
     # tel_num=df_concat.loc[num,'連絡先']
     # st.write('※長押しで電話発信可能')
