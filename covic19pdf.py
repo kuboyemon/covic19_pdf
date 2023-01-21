@@ -104,7 +104,7 @@ else:
     st.write('###### 備考')
     st.write(df_concat.loc[num,'備考'])
     st.write('###### 電話番号')
-    tel_num=df_concat.loc[num,'電話番号']
+    tel_num=df_concat.loc[num,'連絡先']
     st.write('※長押しで電話発信可能')
     stc.html("<a href='tel:{}'>{}</a>".format(tel_num,tel_num)) 
 st.write("""
